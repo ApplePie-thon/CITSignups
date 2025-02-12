@@ -9,7 +9,14 @@
 
 body{
     margin: 0px;
-    background-color: rbg(234,234,234);
+    background-color: rgb(234,234,234);
+    font-family: 'Lucida Bright';
+}
+
+#bodySection {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
 }
 
 /*Header*/
@@ -25,7 +32,9 @@ body{
     left: 0%;
     z-index: 5;
 
-    background-image: linear-gradient(to bottom right, rgb(57,117,166), rgb(4,42,77));
+    /*Old header styling*/
+    /*background-image: linear-gradient(to bottom right, rgb(57,117,166), rgb(4,42,77));*/
+    background-image: linear-gradient(to right, rgb(30, 109, 173), rgb(0, 61, 117));
 }
 #homePage{
     display: flex;
@@ -55,8 +64,8 @@ body{
     font-weight:bolder;
     margin: 0px;
     font-size: 300%;
-    font-family: "Baloo"; 
-    color: rgb(234,234,234);
+    font-family: 'Baloo'; 
+    color: white;
     text-shadow: 3.5px 5px rgb(107,112,180), 7px 10px rgb(56, 60, 128);
 }
 
@@ -76,9 +85,14 @@ body{
     /*background-color: rgb(95, 174, 248);*/
 }
 
-.eventDetails{
-    position: relative;
-    margin: 0px;
-    left: 5%;
-    width: 80%;
+
+.roundedBox {
+    background-color: white;
+    border-radius: 40px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+
+    margin-bottom: 2%;
 }
