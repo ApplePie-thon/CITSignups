@@ -32,6 +32,9 @@ body{
     left: 0%;
     z-index: 5;
 
+    /*Vertically centers header items*/
+    align-items: center;
+
     /*Old header styling*/
     /*background-image: linear-gradient(to bottom right, rgb(57,117,166), rgb(4,42,77));*/
     background-image: linear-gradient(to right, rgb(30, 109, 173), rgb(0, 61, 117));
@@ -95,12 +98,18 @@ a.headerLink:hover {
     color: rgb(235, 235, 235);
 }
 
+#calendarIcon {
+    height: 5%;
+    width: 5%;
+    margin-left: auto;
+}
+
 #calendarText {
+    /*Pushes "Calendar" and "Sign in" to the far right*/
     margin-left: auto;
 }
 
 #signinText {
-    padding-left: auto;
     margin-left: 5%;
     margin-right: 5%;
 }
