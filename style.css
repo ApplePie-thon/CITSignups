@@ -36,6 +36,28 @@ body{
     /*background-image: linear-gradient(to bottom right, rgb(57,117,166), rgb(4,42,77));*/
     background-image: linear-gradient(to right, rgb(30, 109, 173), rgb(0, 61, 117));
 }
+
+.headerItem {
+    color: white;
+    font-size: 180%;
+    font-weight: bold;
+}
+
+/*Styling for header items that link to other pages*/
+a.headerLink {
+    text-decoration: none;
+    color: white;
+}
+
+/*Color darkens when hovered over*/
+a.headerLink:hover {
+    color: rgb(207, 207, 207);
+}
+
+#signinText:hover {
+    color: rgb(207, 207, 207); 
+}
+
 #homePage{
     display: flex;
     margin: 0px;
@@ -69,22 +91,29 @@ body{
     text-shadow: 3.5px 5px rgb(107,112,180), 7px 10px rgb(56, 60, 128);
 }
 
-#expectations {
-    padding-left: 1%;
-    padding-right: 1%;
+#CITSignups:hover{
+    color: rgb(235, 235, 235);
+}
+
+#calendarText {
+    margin-left: auto;
+}
+
+#signinText {
+    padding-left: auto;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 /*Events*/
 
 #events{
     position: relative;
-    margin: 0px;
     left: 10%;
     width: 80%;
 
     /*background-color: rgb(95, 174, 248);*/
 }
-
 
 .roundedBox {
     background-color: white;
@@ -93,6 +122,5 @@ body{
     padding-right: 1%;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
-
     margin-bottom: 2%;
 }
