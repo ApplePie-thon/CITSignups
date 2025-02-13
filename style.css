@@ -94,10 +94,6 @@ a.headerLink:hover {
     text-shadow: 3.5px 5px rgb(107,112,180), 7px 10px rgb(56, 60, 128);
 }
 
-#CITSignups:hover{
-    color: rgb(235, 235, 235);
-}
-
 #calendarIcon {
     height: 5%;
     width: 5%;
