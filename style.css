@@ -1,27 +1,15 @@
-/*Importing font*/
-
-@font-face {
-    font-family: 'Baloo';
-    src: url('./BalooFont/Baloo-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body{
     margin: 0px;
     background-color: rgb(234,234,234);
-    font-family: 'Lucida Bright';
+    font-family: 'Lucida Bright', 'Times New Roman';
+    font-size: 1.4vw;
 }
 
-#bodySection {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 1%;
-}
 
 /*Header*/
 
-#header{
+
+#headerSection{
     display: flex;
     position: relative;
     margin: 0px;
@@ -32,13 +20,16 @@ body{
     left: 0%;
     z-index: 5;
 
+
     /*Vertically centers header items*/
     align-items: center;
+
 
     /*Old header styling*/
     /*background-image: linear-gradient(to bottom right, rgb(57,117,166), rgb(4,42,77));*/
     background-image: linear-gradient(to right, rgb(30, 109, 173), rgb(0, 61, 117));
 }
+
 
 .headerItem {
     color: white;
@@ -46,20 +37,24 @@ body{
     font-weight: bold;
 }
 
+
 /*Styling for header items that link to other pages*/
 a.headerLink {
     text-decoration: none;
     color: white;
 }
 
+
 /*Color darkens when hovered over*/
 a.headerLink:hover {
     color: rgb(207, 207, 207);
 }
 
+
 #signinText:hover {
-    color: rgb(207, 207, 207); 
+    color: rgb(207, 207, 207);
 }
+
 
 #homePage{
     display: flex;
@@ -67,12 +62,13 @@ a.headerLink:hover {
     transition: transform 0.3s ease-in-out;
     transform-origin: left;
     cursor: pointer;
-    top: -10%;
+    top: 0%;
     width: 30%;
     height: 100%;
 }
 #homePage:hover {
     transform: scale(1.05);
+
 
 }
 #CITLogo{
@@ -84,15 +80,16 @@ a.headerLink:hover {
 }
 #CITSignups{
     position: relative;
-    top: 0%;
-    left: 6.5%;
+    left: 5%;
     font-weight:bolder;
     margin: 0px;
-    font-size: 300%;
-    font-family: 'Baloo'; 
+    margin-top: 1.5%;
+    font-size: 3.9vw;
+    font-family: 'Baloo';
     color: white;
     text-shadow: 3.5px 5px rgb(107,112,180), 7px 10px rgb(56, 60, 128);
 }
+
 
 #calendarIcon {
     height: 5%;
@@ -100,25 +97,58 @@ a.headerLink:hover {
     margin-left: auto;
 }
 
+
 #calendarText {
     /*Pushes "Calendar" and "Sign in" to the far right*/
     margin-left: auto;
 }
+
 
 #signinText {
     margin-left: 5%;
     margin-right: 5%;
 }
 
+
+/*Body Section*/
+
+
+#bodySection {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+
+/*Main body*/
+
+
+#welcome{
+    font-family: 'Lucida Bright', 'Times New Roman';
+    font-size: 1.6vw;
+    text-align: center;
+}
+
+
 /*Events*/
+
 
 #events{
     position: relative;
-    left: 10%;
-    width: 80%;
-
     /*background-color: rgb(95, 174, 248);*/
 }
+
+
+#ThanksgivingFeast{
+    position: relative;
+    left: 5%;
+    width: 90%;
+}
+
+
+/* general */
+
 
 .roundedBox {
     background-color: white;
@@ -128,4 +158,43 @@ a.headerLink:hover {
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     margin-bottom: 2%;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    /*border-collapse: collapse;*/
+    background-color: white;
+    padding: 10px;
+}
+
+table {
+    border-radius: 10px;
+    margin: 0px;
+    position: relative;
+    width: 90%;
+    left: 5%;
+}
+
+th, td {
+    display: flex;
+    margin: 0px;
+}
+
+/*Alternating colors on the sign up table*/
+
+th {
+    background-color: rgb(112, 191, 255);
+}
+
+tr:nth-child(even) td {
+    background-color: rgb(163, 214, 255);
+}
+
+tr:nth-child(odd) td {
+    background-color: rgb(112, 191, 255);
+}
+
+.signUpButton {
+   margin-left: auto; 
 }
