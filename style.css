@@ -1,10 +1,11 @@
+/*General styling START*/
+
 body{
     margin: 0px;
     background-color: rgb(234,234,234);
     font-family: 'Lucida Bright', 'Times New Roman';
     font-size: 1.4vw;
 }
-
 
 /*Header*/
 
@@ -66,11 +67,12 @@ a.headerLink:hover {
     width: 30%;
     height: 100%;
 }
+
+/*Logo expands when hovered over*/
 #homePage:hover {
     transform: scale(1.05);
-
-
 }
+
 #CITLogo{
     position: relative;
     left: 4%;
@@ -78,6 +80,7 @@ a.headerLink:hover {
     width: 18%;
     margin: 1%;
 }
+
 #CITSignups{
     position: relative;
     left: 5%;
@@ -88,23 +91,6 @@ a.headerLink:hover {
     color: white;
     text-shadow: 3.5px 5px rgb(107,112,180), 7px 10px rgb(56, 60, 128);
 }
-
-
-#welcome {
-    background-image: url("./TechBG.jpg"), url("./TechBGReverse.jpg");
-    background-position: left, right;
-    background-repeat: no-repeat;
-    background-color: rgb(1,12,27);
-    color: white;
-    overflow: hidden;
-}
-
-#calendarIcon {
-    height: 5%;
-    width: 5%;
-    margin-left: auto;
-}
-
 
 #calendarText {
     /*Pushes "Calendar" and "Sign in" to the far right*/
@@ -117,10 +103,6 @@ a.headerLink:hover {
     margin-right: 5%;
 }
 
-
-/*Body Section*/
-
-
 #bodySection {
     position: relative;
     width: 80%;
@@ -128,15 +110,42 @@ a.headerLink:hover {
     margin-top: 1%;
 }
 
+.roundedBox {
+    background-color: white;
+    border-radius: 40px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    margin-bottom: 2%;
+    transition: transform 0.3s ease-in-out;
+}
 
-/*Main body*/
+/*Rounded boxes expand when hovered over*/
+.roundedBox:hover {
+    transform: scale(1.05);
+}
 
+/*General styling END*/
 
-#welcome{
+/*Home page styling*/
+
+#welcome {
+    background-image: url("./TechBG.jpg"), url("./TechBGReverse.jpg");
+    background-position: left, right;
+    background-repeat: no-repeat;
+    background-color: rgb(1,12,27);
+    color: white;
+    overflow: hidden;
     font-size: 1.6vw;
     text-align: center;
 }
 
+#calendarIcon {
+    height: 5%;
+    width: 5%;
+    margin-left: auto;
+}
 
 /*Events*/
 
@@ -151,60 +160,4 @@ a.headerLink:hover {
     position: relative;
     left: 5%;
     width: 90%;
-}
-
-
-/* general */
-
-
-.roundedBox {
-    background-color: white;
-    border-radius: 40px;
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    margin-bottom: 2%;
-}
-
-
-table, th, td {
-    border: 1px solid black;
-    /*border-collapse: collapse;*/
-    background-color: white;
-    padding: 10px;
-}
-
-table {
-    border-radius: 10px;
-    margin: 0px;
-    position: relative;
-    width: 90%;
-    left: 5%;
-}
-
-th, td {
-    margin: 0px;
-}
-
-tfoot td{
-    text-align: right;
-}
-
-/*Alternating colors on the sign up table*/
-
-th {
-    background-color: rgb(112, 191, 255);
-}
-
-tr:nth-child(odd) td {
-    background-color: rgb(163, 214, 255);
-}
-
-tr:nth-child(even) td {
-    background-color: rgb(112, 191, 255);
-}
-
-.signUpButton {
-   margin-left: auto; 
 }
