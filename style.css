@@ -1,27 +1,16 @@
-/*Importing font*/
-
-@font-face {
-    font-family: 'Baloo';
-    src: url('./BalooFont/Baloo-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+/*General styling START*/
 
 body{
     margin: 0px;
     background-color: rgb(234,234,234);
-    font-family: 'Lucida Bright';
-}
-
-#bodySection {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 1%;
+    font-family: 'Lucida Bright', 'Times New Roman';
+    font-size: 1.4vw;
 }
 
 /*Header*/
 
-#header{
+
+#headerSection{
     display: flex;
     position: relative;
     margin: 0px;
@@ -32,13 +21,16 @@ body{
     left: 0%;
     z-index: 5;
 
+
     /*Vertically centers header items*/
     align-items: center;
+
 
     /*Old header styling*/
     /*background-image: linear-gradient(to bottom right, rgb(57,117,166), rgb(4,42,77));*/
     background-image: linear-gradient(to right, rgb(30, 109, 173), rgb(0, 61, 117));
 }
+
 
 .headerItem {
     color: white;
@@ -46,20 +38,28 @@ body{
     font-weight: bold;
 }
 
+
 /*Styling for header items that link to other pages*/
 a.headerLink {
     text-decoration: none;
     color: white;
 }
 
+
 /*Color darkens when hovered over*/
 a.headerLink:hover {
     color: rgb(207, 207, 207);
 }
 
-#signinText:hover {
-    color: rgb(207, 207, 207); 
+section a {
+    text-decoration: none;
 }
+
+
+#signinText:hover {
+    color: rgb(207, 207, 207);
+}
+
 
 #homePage{
     display: flex;
@@ -67,14 +67,16 @@ a.headerLink:hover {
     transition: transform 0.3s ease-in-out;
     transform-origin: left;
     cursor: pointer;
-    top: -10%;
+    top: 0%;
     width: 30%;
     height: 100%;
 }
+
+/*Logo expands when hovered over*/
 #homePage:hover {
     transform: scale(1.05);
-
 }
+
 #CITLogo{
     position: relative;
     left: 4%;
@@ -82,22 +84,16 @@ a.headerLink:hover {
     width: 18%;
     margin: 1%;
 }
+
 #CITSignups{
     position: relative;
-    top: 0%;
-    left: 6.5%;
+    left: 5%;
     font-weight:bolder;
     margin: 0px;
-    font-size: 300%;
-    font-family: 'Baloo'; 
+    margin-top: 1.5%;
+    font-size: 3.9vw;
     color: white;
     text-shadow: 3.5px 5px rgb(107,112,180), 7px 10px rgb(56, 60, 128);
-}
-
-#calendarIcon {
-    height: 5%;
-    width: 5%;
-    margin-left: auto;
 }
 
 #calendarText {
@@ -105,19 +101,17 @@ a.headerLink:hover {
     margin-left: auto;
 }
 
+
 #signinText {
     margin-left: 5%;
     margin-right: 5%;
 }
 
-/*Events*/
-
-#events{
+#bodySection {
     position: relative;
-    left: 10%;
     width: 80%;
-
-    /*background-color: rgb(95, 174, 248);*/
+    margin-left: 10%;
+    margin-top: 1%;
 }
 
 .roundedBox {
@@ -128,4 +122,78 @@ a.headerLink:hover {
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     margin-bottom: 2%;
+    transition: transform 0.3s ease-in-out;
 }
+
+/*Rounded boxes expand when hovered over*/
+.roundedBox:hover {
+    transform: scale(1.05);
+}
+
+/*General styling END*/
+
+/*Home page styling*/
+
+#welcome {
+    background-image: url("./TechBG.jpg"), url("./TechBGReverse.jpg");
+    background-position: left, right;
+    background-repeat: no-repeat;
+    background-color: rgb(1,12,27);
+    color: white;
+    overflow: hidden;
+    font-size: 1.6vw;
+    text-align: center;
+}
+
+#calendarIcon {
+    height: 5%;
+    width: 5%;
+    margin-left: auto;
+}
+
+/*Events*/
+
+
+#events{
+    position: relative;
+    /*Does not expand when hover*/
+    transform: none;
+}
+
+#eventsMenu {
+    display: flex;
+    justify-content: center;
+}
+
+
+.roundedSquare {
+    border-radius: 40px;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 2%;
+
+    padding-top: 7%;
+    padding-bottom: 7%;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.roundedSquare:hover {
+    transform: scale(1.05);
+}
+
+#ThanksgivingFeast{
+    position: relative;
+    background-image: url("./ThanksgivingBG.jpg");
+    background-size: 100% 100%;
+    color: black;
+}
+
+/* TESTING 
+#WinterGathering {
+    position: relative;
+    background-image: url("./ThanksgivingBG.jpg");
+    background-size: 100% 100%;
+    color: black;
+}
+    */

@@ -1,0 +1,42 @@
+/*Sign up page styling*/
+
+table, th, td {
+    border: 1px solid black;
+    /*border-collapse: collapse;*/
+    background-color: white;
+    padding: 10px;
+}
+
+table {
+    border-radius: 10px;
+    margin: 0px;
+    position: relative;
+    width: 90%;
+    left: 5%;
+}
+
+th, td {
+    margin: 0px;
+}
+
+tfoot td{
+    text-align: right;
+}
+
+/*Alternating colors on the sign up table*/
+
+th {
+    background-color: rgb(112, 191, 255);
+}
+
+tr:nth-child(odd) td {
+    background-color: rgb(163, 214, 255);
+}
+
+tr:nth-child(even) td {
+    background-color: rgb(112, 191, 255);
+}
+
+.signUpButton {
+   margin-left: auto; 
+}

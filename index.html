@@ -7,19 +7,21 @@
         <link href="./style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="./script.js" defer></script>
     </head>
     <body>
-        <section id="header">
-                <div id="homePage">
-                    <img src="./CITLogo.png" alt="Logo" id="CITLogo">
-                    <p id="CITSignups">CIT Signups</p>
-                </div>
-                <!--<img src="./CalendarIcon.png" id="calendarIcon">-->
-                <p class="headerItem" id="calendarText"><a href="./calendar.html" class="headerLink">Calendar</a></p>
-                <p class="headerItem" id="signinText">Sign in</p>
-        </section>
+        <div id="headerSection">
+            <section id="homePage">
+                <img src="./CITLogo.png" alt="Logo" id="CITLogo">
+                <p id="CITSignups">CIT Signups</p>
+            </section>
+            <!--<img src="./CalendarIcon.png" id="calendarIcon">-->
+            <p class="headerItem" id="calendarText"><a href="./calendar.html" class="headerLink">Calendar</a></p>
+            <p class="headerItem" id="signinText">Sign in</p>
+        </div>
         <div id="bodySection">
+            <section class="roundedBox" id="welcome">
+                <h1>Welcome to CIT Signups!</h1>
+            </section>
             <section class="roundedBox" id="expectations">
                 <h2>Expectations</h2>
                 <p>All CIT Signups users are expected to abide by the following:</p>
@@ -29,16 +31,21 @@
                 </ul>
             </section>
 
+
             <section class="roundedBox" id="events">
                 <h2>Events</h2>
-                <section id="WinterGathering">
-                    <h1><a href="./thanksgivingSignup.html">CIT Thanksgiving Feast</a></h1>
-                    <h1>Winter Gathering</h1>
-
+                <section id="#eventsMenu">
+                    <a href="./thanksgivingSignup.html"><section class="roundedSquare" id="ThanksgivingFeast">
+                        <h1>CIT Thanksgiving Feast</h1>
+                    </section></a>
+                    <section class=roundedSquare" id="WinterGathering">
+                        <h1>Winter Gathering</h1>
+                    </section>
                 </section>
             </section>
 
             <section id="footer">
+
 
             </section>
         </div>
