@@ -40,3 +40,38 @@ tr:nth-child(even) td {
 .signUpButton {
    margin-left: auto; 
 }
+
+/*Inputs*/
+
+#inputs{
+    display: none;
+    z-index: 6;
+    background-color: aqua;
+    padding: 0.5%;
+    position: fixed;
+    width: 60%;
+    height: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 40px;
+}
+
+#inputs input[type="text"]{
+    width: 80%;
+    font-size: 1.1vw;
+}
+
+#extras{
+    height: 4vw;
+    font-size: 1vw;
+}
+
+#confirm{
+    position: relative;
+    margin-top: 0.2%;
+    height: 2.5vw;
+    width: 10vw;
+}
+  

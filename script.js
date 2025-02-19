@@ -3,7 +3,7 @@ logo.addEventListener('click', function() {
     window.location.href = "./index.html"
 })
 
-
+//First option
 const maxAppetizer = 10;
 let number = 0;
 
@@ -30,6 +30,15 @@ function addItem() {
     //Updates count of signed up people
     number += 1;
 
+    //hiding input section and clearing inputs
+
+    document.getElementById("inputs").style.setProperty("display", "none", "important");
+    document.getElementById("nameInput").value = "";
+    document.getElementById("dishNameInput").value = "";
+    document.getElementById("emailInput").value = "";
+    document.getElementById("extras").value = "";
+
+
     //Adds another sign up in the tfoot if under max capacity
     if (number < maxAppetizer) {
         const newRow = document.createElement('tr');    
@@ -47,10 +56,15 @@ function addItem() {
         newRow.appendChild(newData);
         document.querySelector("#appetizerSignup tfoot").appendChild(newRow);
 
-        newButton.addEventListener("click", addItem); /*Recursion to keep adding the sign up button in the footer until table hits max length*/
+        newButton.addEventListener("click", showInputs); /*Recursion to keep adding the sign up button in the footer until table hits max length*/
     }
 }
 
-document.getElementById("signup").addEventListener('click', function(){
+function showInputs(){
+    document.getElementById("inputs").style.setProperty("display", "block", "important");
+}
+
+document.getElementById("confirm").addEventListener('click', function(){
     addItem();
 })
+document.getElementById("signup").addEventListener("click", showInputs);
