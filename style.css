@@ -85,11 +85,18 @@ a.headerLink:hover {
     margin: 0px;
     margin-top: 1.5%;
     font-size: 3.9vw;
-    font-family: 'Baloo';
     color: white;
     text-shadow: 3.5px 5px rgb(107,112,180), 7px 10px rgb(56, 60, 128);
 }
 
+#welcome {
+    background-image: url("./TechBG.jpg"), url("./TechBGReverse.jpg");
+    background-position: left, right;
+    background-repeat: no-repeat;
+    background-color: rgb(1,12,27);
+    color: white;
+    overflow: hidden;
+}
 
 #calendarIcon {
     height: 5%;
@@ -125,7 +132,6 @@ a.headerLink:hover {
 
 
 #welcome{
-    font-family: 'Lucida Bright', 'Times New Roman';
     font-size: 1.6vw;
     text-align: center;
 }
