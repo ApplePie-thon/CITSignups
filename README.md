@@ -4,8 +4,9 @@
  Progress:
  - Base design for home page
  - Logo expands when hovers and directs to home page when clicked
+ - Signing up for events base functionality on thanksgivingSignup.html
 #
  Future updates:
  - Sign in functionality on home page
- - Signing up for events functionality on thanksgivingSignup.html
  - Refine colors, font, and visual design
+ - Calendar
