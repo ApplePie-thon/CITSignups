@@ -10,7 +10,11 @@ let number = 0;
 function addItem() {
     
     //Creates a new row with name, dish, and email info
-    if(document.getElementById("nameInput").value == "" || document.getElementById("dishNameInput").value == "" || document.getElementById("emailInput").value == ""){
+    if(
+        document.getElementById("nameInput").value == "" ||
+        document.getElementById("dishNameInput").value == "" ||
+        document.getElementById("emailInput").value == ""
+        ){
         document.getElementById("confirm").innerHTML = "Please fill in indicated fields";
         document.getElementById("confirm").style.color = "red";
         document.getElementById("confirm").style.fontWeight = "bold";
@@ -68,6 +72,13 @@ function addItem() {
             newData.style.textAlign = "right";
             newData.setAttribute('colspan', 3);
 
+            //Maintains alternating colors in table
+            if (number % 2 == 1) {
+                newData.style.backgroundColor = "rgb(112, 191, 255)";
+            } else {
+                newData.style.backgroundColor = "rgb(163, 214, 255)";
+            }
+
             const newButton = document.createElement("button");
             newButton.className = "signUpButton";
             newButton.innerHTML = "Sign Up";
@@ -96,6 +107,7 @@ document.getElementById("confirm").addEventListener('click', function(){
 })
 document.getElementById("signup").addEventListener("click", showInputs);
 
+//Escapes out of popup when 'X' or escape key pressed
 document.getElementById("closeSignUp").addEventListener("click", function(){
     document.getElementById("inputs").style.setProperty("display", "none", "important");
     document.getElementById("nameInput").value = "";

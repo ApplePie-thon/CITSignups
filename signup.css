@@ -80,7 +80,7 @@ tr:nth-child(even) td {
 }
 
 #inputHeader{
-    background-color: blue;
+    background-color: rgb(30, 109, 173);
     width: 100%;
     margin: 0px;
     padding: 0.002%;
