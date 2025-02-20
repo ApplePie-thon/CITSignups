@@ -8,9 +8,9 @@ const maxAppetizer = 10;
 let number = 0;
 
 function addItem() {
-    document.getElementById("appetizerSignup").querySelector("tfoot").innerHTML = "";
     
     //Creates a new row with name, dish, and email info
+    document.querySelector("#appetizerSignup tfoot").innerHTML = "";
 
     const newtr = document.createElement("tr");
     const name = document.createElement("td");
@@ -37,7 +37,6 @@ function addItem() {
     document.getElementById("dishNameInput").value = "";
     document.getElementById("emailInput").value = "";
     document.getElementById("extras").value = "";
-
 
     //Adds another sign up in the tfoot if under max capacity
     if (number < maxAppetizer) {
@@ -68,3 +67,13 @@ document.getElementById("confirm").addEventListener('click', function(){
     addItem();
 })
 document.getElementById("signup").addEventListener("click", showInputs);
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        document.getElementById("inputs").style.setProperty("display", "none", "important");
+        document.getElementById("nameInput").value = "";
+        document.getElementById("dishNameInput").value = "";
+        document.getElementById("emailInput").value = "";
+        document.getElementById("extras").value = "";
+    }
+  });

@@ -7,7 +7,8 @@
         <link href="./style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+        <script src="./dimmer.js" defer></script>
+        <script src="./rain.js" defer></script>
     </head>
     <body>
         <div id="headerSection">
@@ -34,20 +35,25 @@
 
 
             <section class="roundedBox" id="events">
-                <h2>Events</h2>
+                <h2>Upcoming Events</h2>
                 <section id="#eventsMenu">
                     <a href="./thanksgivingSignup.html">
-                        <section class="roundedBox" id="ThanksgivingFeast">
-                            <h1 id="thanksgivingFeastText">CIT Thanksgiving Feast</h1>
-                            <section id="thanksgivingInfo">
+                        <section class="roundedBox eventBox">
+                            <h1 class="eventTitle" id="thanksgivingFeastTitle"><span class="eventDimmer">CIT Thanksgiving Feast</span></h1>
+                            <section class="eventInfo">
                                 <p>Info:</p>
                                 <p>Monday, November 25th 5:00-7:00 @ Commons 1</p>
                                 <p>Contact: hcps-gardnejk1@henricostudents.org</p>
                             </section>
                         </section>
                     </a>
-                    <section class=roundedSquare" id="WinterGathering">
-                        <h1>Winter Gathering</h1>
+                    <section class="roundedBox eventBox">
+                        <h1 class="eventTitle" id="winterGatheringTitle">CIT Winter Gathering</h1>
+                        <section class="eventInfo">
+                            <p>Info:</p>
+                            <p>Monday, December 11th 11:35-12:35 @ SC4</p>
+                            <p>Contact: hcps-gardnejk1@henricostudents.org</p>
+                        </section>
                     </section>
                 </section>
             </section>
@@ -57,7 +63,7 @@
 
             </section>
 
-            <!--<div class="binary-container"></div>-->
+            <div class="binary-container"></div>
 
         </div>
     </body>

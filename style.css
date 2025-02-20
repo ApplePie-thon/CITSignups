@@ -69,7 +69,7 @@ section a {
     transform-origin: left;
     cursor: pointer;
     top: 0%;
-    width: 30%;
+    width: 32%;
     height: 100%;
 }
 
@@ -81,8 +81,8 @@ section a {
 #CITLogo{
     position: relative;
     left: 4%;
-    height: 18%;
-    width: 18%;
+    height: 20%;
+    width: 20%;
     margin: 1%;
 }
 
@@ -91,7 +91,7 @@ section a {
     left: 5%;
     font-weight:bolder;
     margin: 0px;
-    margin-top: 1.5%;
+    margin-top: 3.5%;
     font-size: 3.9vw;
     color: white;
     text-shadow: 3.5px 5px rgb(107,112,180), 7px 10px rgb(56, 60, 128);
@@ -187,15 +187,15 @@ section a {
     transform: scale(1.05);
 }
 
-#ThanksgivingFeast{
+.eventBox{
     position: relative;
     padding: 0px;
     border: 5px solid black;
     overflow: hidden;
+    color: black;
 }
 
-#thanksgivingFeastText{
-    background-image: url("./ThanksgivingBg.png");
+.eventTitle{
     background-size: cover;
     margin-top: 0px;
     padding: 3%;
@@ -203,11 +203,34 @@ section a {
     font-size: 3vw;
     font-weight: bold;
     margin: 0px;
+    text-shadow: 
+        -2px -2px 2px black,
+        2px -2px 2px black,
+        -2px  2px 2px black,
+        2px  2px 2px black,
+        -2px  2px 2px black,
+        2px  2px 2px black,
+        2px -2px 2px black,
+        2px  2px 2px black;
+    color: white; /* Ensure text remains readable */
 }
-#thanksgivingInfo{
+.eventInfo{
     position: relative;
     padding-bottom: 1%;
 }
+
+#thanksgivingFeastTitle{
+    background-image: url("./ThanksgivingBg.png");
+}
+
+#winterGatheringTitle{
+    background-image: url("./WinterBg.png");
+}
+
+.eventDimmer{
+    background-color: rbga(0,0,0,50);
+}
+
 /* TESTING 
 #WinterGathering {
     position: relative;
@@ -216,5 +239,33 @@ section a {
     color: black;
 }
 */    
+
+.binary-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Prevents interference with clicks */
+    z-index: -1; /* Keeps it in the background */
+}
+
+.binary {
+    position: absolute;
+    color: #00ff00;
+    font-family: monospace;
+    font-size: 2vw; /* Adjust size as needed */
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-5%);
+    }
+    to {
+        transform: translateY(105vh);
+    }
+}
 
 
