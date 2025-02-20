@@ -61,7 +61,6 @@ section a {
     color: rgb(207, 207, 207);
 }
 
-
 #homePage{
     display: flex;
     margin: 0px;
@@ -99,7 +98,8 @@ section a {
 
 #calendarText {
     /*Pushes "Calendar" and "Sign in" to the far right*/
-    margin-left: auto;
+    position: relative;
+    left: 40%;
 }
 
 
@@ -130,6 +130,54 @@ section a {
 .roundedBox:hover {
     transform: scale(1.05);
 }
+
+#optionBarTrigger{
+    position: absolute;
+    margin: 0px;
+    right: 0%;
+    top:0%;
+    height: 17.5%;
+    width: 16.5%;    
+    /*background-color: rgba(0, 225, 255, 0.377);*/
+    z-index: 5;
+    cursor: pointer;
+    text-align: center;
+}
+
+#optionBarTrigger:hover ~ #dropdown,
+#dropdown:hover {
+    top: 17.5%;
+}
+
+#dropdown{
+    position: absolute;
+    z-index: 4;
+    right: 0%;
+    top: 0%;
+    width: 16.5%;
+    transition: top 0.3s ease-in-out;
+}
+
+#dropdown p{
+    background-color: rgb(202, 202, 202);
+    margin: 0px;
+    text-align: center;
+    padding: 5%;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+}
+
+#dropdown p:hover{
+    background-color: rgb(180, 180, 180);
+    cursor:pointer;
+}
+
+#logOut{
+    border-bottom-left-radius: 30px;
+}
+
+
 
 /*General styling END*/
 
@@ -252,9 +300,10 @@ section a {
 
 .binary {
     position: absolute;
-    color: #00ff00;
+    /*color: rgb(46, 222, 46);*/
+    color: rgb(66, 154, 255);
     font-family: monospace;
-    font-size: 2vw; /* Adjust size as needed */
+    font-size: 2vw;
     opacity: 0.8;
     animation: fall linear infinite;
 }
@@ -267,5 +316,3 @@ section a {
         transform: translateY(105vh);
     }
 }
-
-

@@ -5,9 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
         binary.innerText = Math.random() > 0.5 ? "0" : "1";
         document.querySelector(".binary-container").appendChild(binary);
 
-        // Define the five column positions in vw for both left and right sides
-        const columnsLeft = [0.5, 2.5, 4.5, 6.5, 8.5]; // First 10% of screen
-        const columnsRight = [89, 91, 93, 95, 97]; // Last 10% of screen
+        const columnsLeft = [0.5, 2.5, 4.5, 6.5, 8.5]; // left of screen
+        const columnsRight = [89, 91, 93, 95, 97]; // Right of screen
 
         // Randomly select from either left or right side
         const isLeft = Math.random() > 0.5;
