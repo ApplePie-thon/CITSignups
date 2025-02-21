@@ -123,12 +123,6 @@ section a {
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     margin-bottom: 2%;
-    transition: transform 0.3s ease-in-out;
-}
-
-/*Rounded boxes expand when hovered over*/
-.roundedBox:hover {
-    transform: scale(1.05);
 }
 
 #optionBarTrigger{
@@ -218,29 +212,17 @@ section a {
     justify-content: center;
 }
 
-
-.roundedSquare {
-    border-radius: 40px;
-    width: 25%;
-    text-align: center;
-    margin-bottom: 2%;
-
-    padding-top: 7%;
-    padding-bottom: 7%;
-
-    transition: transform 0.3s ease-in-out;
-}
-
-.roundedSquare:hover {
-    transform: scale(1.05);
-}
-
 .eventBox{
     position: relative;
     padding: 0px;
     border: 5px solid black;
     overflow: hidden;
     color: black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.eventBox:hover {
+    transform: scale(1.05);
 }
 
 .eventTitle{
