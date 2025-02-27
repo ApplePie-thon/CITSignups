@@ -32,5 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Generate binary digits at intervals
-    setInterval(createBinary, 50); // Adjust speed if needed
+    setInterval(createBinary, 35); // Adjust speed if needed
 });
