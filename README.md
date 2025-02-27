@@ -3,6 +3,7 @@
 #
  Progress:
  - Base design for home page
+ - Base design for calendar
  - Logo expands when hovers and directs to home page when clicked
  - Signing up for events base functionality on thanksgivingSignup.html
  - Colors, font, and general theme of website established
