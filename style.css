@@ -54,6 +54,12 @@ a.headerLink:hover {
 
 section a {
     text-decoration: none;
+    color: black;
+}
+
+.emailLink {
+    color: blue;
+    text-decoration: underline;
 }
 
 
@@ -127,7 +133,7 @@ section a {
 }
 
 /*Rounded boxes expand when hovered over*/
-.roundedBox:hover {
+.eventBox:hover {
     transform: scale(1.05);
 }
 
@@ -199,6 +205,10 @@ section a {
     height: 5%;
     width: 5%;
     margin-left: auto;
+}
+
+#expectations {
+    padding-left: 2.5%
 }
 
 /*Events*/
