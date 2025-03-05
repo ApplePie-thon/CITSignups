@@ -7,8 +7,12 @@ logo.addEventListener('click', function() {
 const maxAppetizer = 10;
 let number = 0;
 
+/*MAKE ADAPTABLE FOR ALL TABLES, NOT JUST APPETIZERS*/
 function addItem() {
     
+    document.getElementById("signup").style.display = "none";
+    console.log("no");
+
     //Creates a new row with name, dish, and email info
     if(
         document.getElementById("nameInput").value == "" ||
@@ -87,7 +91,13 @@ function addItem() {
             newRow.appendChild(newData);
             document.querySelector("#appetizerSignup tfoot").appendChild(newRow);
 
+            //Updates available slots number
+            document.getElementById("appetizer_th").innerHTML = "Appetizers (" + (maxAppetizer-number) + "/" + maxAppetizer + " available slots)";
+
             newButton.addEventListener("click", showInputs); /*Recursion to keep adding the sign up button in the footer until table hits max length*/
+        } else if (number == maxAppetizer) {
+            //Updates available slots number
+            document.getElementById("appetizer_th").innerHTML = "Appetizers (All slots filled)";
         }
     }
 }

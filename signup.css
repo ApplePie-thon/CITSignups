@@ -1,5 +1,9 @@
 /*Sign up page styling*/
 
+.eventDetails {
+    padding-left: 2.5%
+}
+
 table, th, td {
     border: 1px solid black;
     /*border-collapse: collapse;*/
@@ -38,7 +42,16 @@ tr:nth-child(even) td {
 }
 
 .signUpButton {
-   margin-left: auto; 
+   margin-left: auto;
+   background-color: #f0f0f0;
+   padding: 1%;
+   border-radius: 5px;
+   font-size: 1.1vw;
+}
+
+/*Sign up button changes color when hovered over*/
+.signUpButton:hover {
+    background-color: #e2e2e2;;
 }
 
 /*Inputs*/
