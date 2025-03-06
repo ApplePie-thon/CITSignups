@@ -9,9 +9,6 @@ let number = 0;
 
 /*MAKE ADAPTABLE FOR ALL TABLES, NOT JUST APPETIZERS*/
 function addItem() {
-    
-    document.getElementById("signup").style.display = "none";
-    console.log("no");
 
     //Creates a new row with name, dish, and email info
     if(
@@ -65,6 +62,13 @@ function addItem() {
         document.getElementById("nameInput").value = "";
         document.getElementById("dishNameInput").value = "";
         document.getElementById("emailInput").value = "";
+        
+        //Manual, will need to be modified to loop through all checkboxes in the future
+        document.getElementById("dairy").checked = false;
+        document.getElementById("fish").checked = false;
+        document.getElementById("gluten").checked = false;
+        document.getElementById("meat").checked = false;
+
         document.getElementById("extras").value = "";
 
         //Adds another sign up in the tfoot if under max capacity
