@@ -63,7 +63,7 @@
 
                 <tfoot>
                     <tr class="signUp">
-                        <td colspan="3"><button class="signUpButton" id="signup">Sign up</button></td>
+                        <td colspan="3"><button class="signUpButton" id="appetizerSignupButton">Sign up</button></td>
                     </tr>
                 </tfoot>
             </table>
@@ -73,9 +73,22 @@
             <!--Desserts Table-->
             <!--Backend interaction: Displays the correct limit on items in the table, also used in js-->
             <table id="dessertSignup">
-                <tr>
-                    <th id="dessert_th" colspan="3">Desserts (10/10 available slots)</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <!--Backend interaction: Displays the correct limit on items in the table, also used in js-->
+                        <th id="dessert_th" colspan="3">Desserts (5/5 available slots)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!--Will add sign up item content-->
+                </tbody>
+
+                <tfoot>
+                    <tr class="signUp">
+                        <td colspan="3"><button class="signUpButton" id="dessertSignupButton">Sign up</button></td>
+                    </tr>
+                </tfoot>
             </table>
 
             <!--Popup to sign up for an item-->

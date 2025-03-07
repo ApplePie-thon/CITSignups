@@ -111,6 +111,7 @@ tr:nth-child(even) td {
     position: absolute;
     top: 4%;
     right: 2%;
+    height:15%;
     transition: transform 0.3s ease-in-out;
 }
 

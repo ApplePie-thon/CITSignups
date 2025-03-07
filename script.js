@@ -4,8 +4,8 @@ logo.addEventListener('click', function() {
 })
 
 //First option
-const maxAppetizer = 10;
-let number = 0;
+var maxappetizer = 10;
+var maxdessert = 5;
 
 /*MAKE ADAPTABLE FOR ALL TABLES, NOT JUST APPETIZERS*/
 function addItem() {
@@ -35,8 +35,7 @@ function addItem() {
             document.getElementById("emailInput").style.border = "1px solid black";
         }
     } else {
-
-        document.querySelector("#appetizerSignup tfoot").innerHTML = "";
+        document.querySelector("#" + tableid + "Signup tfoot").innerHTML = "";
 
         const newtr = document.createElement("tr");
         const name = document.createElement("td");
@@ -51,10 +50,9 @@ function addItem() {
         newtr.appendChild(email);
         
         //Adds new row to tbody
-        document.querySelector("#appetizerSignup tbody").appendChild(newtr);
+        document.querySelector("#" + tableid + "Signup tbody").appendChild(newtr);
 
         //Updates count of signed up people
-        number += 1;
 
         //hiding input section and clearing inputs
 
@@ -72,7 +70,7 @@ function addItem() {
         document.getElementById("extras").value = "";
 
         //Adds another sign up in the tfoot if under max capacity
-        if (number < maxAppetizer) {
+        if (document.querySelector("#" + tableid + "Signup tbody").querySelectorAll("tr").length < window["max" + tableid]) {
             const newRow = document.createElement('tr');    
             newRow.className = "signUp";
             
@@ -81,7 +79,7 @@ function addItem() {
             newData.setAttribute('colspan', 3);
 
             //Maintains alternating colors in table
-            if (number % 2 == 1) {
+            if (document.querySelector("#" + tableid + "Signup tbody").querySelectorAll("tr").length % 2 == 1) {
                 newData.style.backgroundColor = "rgb(112, 191, 255)";
             } else {
                 newData.style.backgroundColor = "rgb(163, 214, 255)";
@@ -90,18 +88,26 @@ function addItem() {
             const newButton = document.createElement("button");
             newButton.className = "signUpButton";
             newButton.innerHTML = "Sign Up";
+            newButton.value = tableid;
             
             newData.appendChild(newButton);
             newRow.appendChild(newData);
-            document.querySelector("#appetizerSignup tfoot").appendChild(newRow);
+            document.querySelector("#" + tableid + "Signup tfoot").appendChild(newRow);
 
             //Updates available slots number
-            document.getElementById("appetizer_th").innerHTML = "Appetizers (" + (maxAppetizer-number) + "/" + maxAppetizer + " available slots)";
 
-            newButton.addEventListener("click", showInputs); /*Recursion to keep adding the sign up button in the footer until table hits max length*/
-        } else if (number == maxAppetizer) {
+            console.log(window["max" + tableid]);
+            console.log(document.querySelector("#" + tableid + "Signup tbody").querySelectorAll("tr"));
+
+            document.querySelector("#" + tableid + "Signup th").innerHTML = tableText + " (" + (window["max" + tableid]-document.querySelector("#" + tableid + "Signup tbody").querySelectorAll("tr").length) + "/" + window["max" + tableid] + " available slots)";
+
+            newButton.addEventListener("click", function(){
+                showInputs();
+                tableid = newButton.value;
+            }); /*Recursion to keep adding the sign up button in the footer until table hits max length*/
+        } else if (document.querySelector("#" + tableid + "Signup tbody").querySelectorAll("tr").length == window["max" + tableid]) {
             //Updates available slots number
-            document.getElementById("appetizer_th").innerHTML = "Appetizers (All slots filled)";
+            document.querySelector("#" + tableid + "Signup th").innerHTML = tableText + " (All slots filled)";
         }
     }
 }
@@ -119,7 +125,18 @@ function showInputs(){
 document.getElementById("confirm").addEventListener('click', function(){
     addItem();
 })
-document.getElementById("signup").addEventListener("click", showInputs);
+
+document.getElementById("appetizerSignupButton").addEventListener("click", function(){
+    showInputs();
+    tableid = "appetizer";
+    tableText = "Appetizers";
+});
+
+document.getElementById("dessertSignupButton").addEventListener("click", function(){
+    showInputs();
+    tableid = "dessert";
+    tableText = "Desserts";
+});
 
 //Escapes out of popup when 'X' or escape key pressed
 document.getElementById("closeSignUp").addEventListener("click", function(){
