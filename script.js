@@ -9,7 +9,7 @@ var maxdessert = 5;
 
 /*MAKE ADAPTABLE FOR ALL TABLES, NOT JUST APPETIZERS*/
 function addItem() {
-    profanitylist = ["bitch", "fuck", "ass"]
+    profanitylist = ["bitch", "fuck", "ass", "nigga", "retarded", "cunt","shit","nigger","chink","gay","sex","jerk off","cum", "masterbate","motherfucker","whore","penis","pussy","retard","blowjob","slut","cock"]
     //Creates a new row with name, dish, and email info
     if(
         document.getElementById("nameInput").value == "" ||
