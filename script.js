@@ -9,7 +9,7 @@ var maxdessert = 5;
 
 /*MAKE ADAPTABLE FOR ALL TABLES, NOT JUST APPETIZERS*/
 function addItem() {
-
+    profanitylist = ["bitch", "fuck", "ass", "nigga", "retarded", "cunt","shit","nigger","chink","gay","sex","jerk off","cum", "masterbate","motherfucker","whore","penis","pussy","retard","blowjob","slut","cock"]
     //Creates a new row with name, dish, and email info
     if(
         document.getElementById("nameInput").value == "" ||
@@ -34,7 +34,15 @@ function addItem() {
         } else {
             document.getElementById("emailInput").style.border = "1px solid black";
         }
-    } else {
+    }  else if(
+        profanitylist.includes(document.getElementById("nameInput").value.trim().toLowerCase()) || 
+        profanitylist.includes(document.getElementById("dishNameInput").value.trim().toLowerCase())
+    ){
+        alert("profanity detected, instance sent to event lead");
+        document.getElementById("nameInput").value = "";
+        document.getElementById("dishNameInput").value = "";
+    }
+    else {
         document.querySelector("#" + tableid + "Signup tfoot").innerHTML = "";
 
         const newtr = document.createElement("tr");
@@ -111,7 +119,9 @@ function addItem() {
         }
     }
 }
-
+function emailtolead() {
+    
+}
 function showInputs(){
     document.getElementById("inputs").style.setProperty("display", "block", "important");
     document.getElementById("confirm").innerHTML = "Confirm";
