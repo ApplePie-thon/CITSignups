@@ -181,7 +181,6 @@ section a {
 
 /*General styling END*/
 
-
 /*Home page styling*/
 
 #welcome {
@@ -194,6 +193,7 @@ section a {
     font-size: 1.6vw;
     text-align: center;
 }
+
 
 #calendarIcon {
     height: 5%;
