@@ -38,7 +38,16 @@ function addItem() {
         } else {
             document.getElementById("emailInput").style.border = "1px solid black";
         }
-    } else {
+    }  else if(
+        profanitylist.includes(document.getElementById("nameInput").value.trim().toLowerCase()) || 
+        profanitylist.includes(document.getElementById("dishNameInput").value.trim().toLowerCase())
+    )
+    {
+        alert("profanity detected, instance sent to event lead");
+        document.getElementById("nameInput").value = "";
+        document.getElementById("dishNameInput").value = "";
+    }
+    else {
         console.log("#" + tableid + "Signup tfoot");
         document.querySelector("#" + tableid + "Signup tfoot").innerHTML = "";
 
