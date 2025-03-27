@@ -49,48 +49,47 @@
             
             <!--Backend interaction: Create all necessary tables for event with appropriate table names-->
             <!--Appetizers Table-->
-            <table id="appetizerSignup">
-                <thead>
-                    <tr>
-                        <!--Backend interaction: Displays the correct limit on items in the table, also used in js-->
-                        <th id="appetizer_th" colspan="3">Appetizers (10/10 available slots)</th>
-                    </tr>
-                </thead>
+            <section id="tables">
+                <!--<table id="appetizerSignup">
+                    <thead>
+                        <tr>
+                            <th id="appetizer_th" colspan="4">Appetizers (10/10 available slots)</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <!--Will add sign up item content-->
-                </tbody>
+                    <tbody>
+                    </tbody>
 
-                <tfoot>
-                    <tr class="signUp">
-                        <td colspan="3"><button class="signUpButton" id="appetizerSignupButton">Sign up</button></td>
-                    </tr>
-                </tfoot>
-            </table>
+                    <tfoot>
+                        <tr class="signUp">
+                            <td colspan="4"><button class="signUpButton" id="appetizerSignupButton">Sign up</button></td>
+                        </tr>
+                    </tfoot>
+                </table>
 
-            <br>
+                <br>
 
-            <!--Desserts Table-->
-            <!--Backend interaction: Displays the correct limit on items in the table, also used in js-->
-            <table id="dessertSignup">
-                <thead>
-                    <tr>
-                        <!--Backend interaction: Displays the correct limit on items in the table, also used in js-->
-                        <th id="dessert_th" colspan="3">Desserts (5/5 available slots)</th>
-                    </tr>
-                </thead>
+                <table id="dessertSignup">
+                    <thead>
+                        <tr>
+                            <th id="dessert_th" colspan="4">Desserts (5/5 available slots)</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <!--Will add sign up item content-->
-                </tbody>
+                    <tbody>
+                    
+                    </tbody>
 
-                <tfoot>
-                    <tr class="signUp">
-                        <td colspan="3"><button class="signUpButton" id="dessertSignupButton">Sign up</button></td>
-                    </tr>
-                </tfoot>
-            </table>
-
+                    <tfoot>
+                        <tr class="signUp">
+                            <td colspan="4"><button class="signUpButton" id="dessertSignupButton">Sign up</button></td>
+                        </tr>
+                    </tfoot>
+                </table>-->
+            </section>
+            <button id="addTable">Add Table</button>
+            <input type="text" id="tableName" placeholder="Table name">
+            <input type="text" id="maxEntries" placeholder="Max entries">
             <!--Popup to sign up for an item-->
             <div id="inputs">
                 <section id="inputHeader">
@@ -106,13 +105,13 @@
                     <br>
                     
                     <p>Please select all ingredients below that you dish (may) contain</p>
-                    <input type="checkbox" id="dairy">
+                    <input type="checkbox" id="dairy" class="checkbox">
                     <label for="dairy">Dairy</label>
-                    <input type="checkbox" id="fish">
+                    <input type="checkbox" id="fish" class="checkbox">
                     <label for="fish">Fish</label>
-                    <input type="checkbox" id="gluten">
+                    <input type="checkbox" id="gluten" class="checkbox">
                     <label for="gluten">Gluten</label>
-                    <input type="checkbox" id="meat">
+                    <input type="checkbox" id="meat" class="checkbox">
                     <label for="meat">Meats (specify below)</label>
                     
                     <br>
@@ -121,7 +120,13 @@
                     <button id="confirm">Confirm</button>
                 </section>
             </div>
-
+            
+            <div id="deletePopup">
+                <p>Are you sure you want to delete this entry?</p>
+                <button id="confirmDelete">Confirm</button>
+                <button id="cancelDelete">Cancel</button>
+            </div>
+            
             <section id="footer">
 
             </section>
