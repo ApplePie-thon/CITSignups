@@ -3,7 +3,7 @@
 body{
     margin: 0px;
     background-color: rgb(234,234,234);
-    font-family: 'Lucida Bright', 'Times New Roman';
+    font-family: 'Lucida Bright'/*, 'Times New Roman'; */;
     font-size: 1.4vw;
     margin: 0;
 }
