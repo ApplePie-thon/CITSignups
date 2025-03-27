@@ -41,14 +41,12 @@ function addItem() {
     }  else if(
         profanitylist.includes(document.getElementById("nameInput").value.trim().toLowerCase()) || 
         profanitylist.includes(document.getElementById("dishNameInput").value.trim().toLowerCase())
-    )
-    {
+    ){
         alert("profanity detected, instance sent to event lead");
         document.getElementById("nameInput").value = "";
         document.getElementById("dishNameInput").value = "";
     }
     else {
-        console.log("#" + tableid + "Signup tfoot");
         document.querySelector("#" + tableid + "Signup tfoot").innerHTML = "";
 
         const newtr = document.createElement("tr");
