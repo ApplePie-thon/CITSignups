@@ -49,6 +49,7 @@
             
             <!--Backend interaction: Create all necessary tables for event with appropriate table names-->
             <!--Appetizers Table-->
+            <button id="showAddTable">Add Table</button>
             <section id="tables">
                 <!--<table id="appetizerSignup">
                     <thead>
@@ -87,15 +88,18 @@
                     </tfoot>
                 </table>-->
             </section>
-            <p>Add a Table</p>
         <form id="tableForm">
+            <p>Add a Table</p>
             <label for="tableName">Category Name:</label>
+            <br>
             <input type="text" id="tableName" required>
-            
+            <br>
             <label for="maxEntries">Max Entries:</label>
+            <br>
             <input type="number" id="maxEntries">
-            
-            <button id="addTable">Add Table</button>
+            <br></br>
+            <button id="addTable" type="button">Add Table</button>
+            <button id="cancelAddTable">Cancel</button>
         </form>
 
             <!--Popup to sign up for an item-->

@@ -254,6 +254,9 @@ document.addEventListener("keydown", function(event) {
   document.getElementById("addTable").addEventListener("click",function(){
     let tableName = document.getElementById("tableName").value;
     let maxEntries = document.getElementById("maxEntries").value;
+    document.getElementById("tableForm").style.setProperty("display", "none", "important");
+    document.getElementById("tableName").value = "";
+    document.getElementById("maxEntries").value = "";
     addTable(tableName,maxEntries);
   })
 
@@ -310,3 +313,14 @@ document.addEventListener("keydown", function(event) {
     section.appendChild(document.createElement("br"));
     section.appendChild(table);
 }
+
+document.getElementById("showAddTable").addEventListener("click",function(){
+    console.log("button clicked");
+    document.getElementById("tableForm").style.setProperty("display", "block", "important");
+})
+
+document.getElementById("cancelAddTable").addEventListener("click",function(){
+    document.getElementById("tableForm").style.setProperty("display", "none", "important");
+    document.getElementById("tableName").value = "";
+    document.getElementById("maxEntries").value = "";
+})
