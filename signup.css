@@ -140,9 +140,9 @@ tr:nth-child(even) td {
     position: fixed;
     align-content: center;
     top:30%;
-    left: 40%;
-    width: 20%;
-    height: 20vh;
+    left: 30%;
+    width: 40%;
+    height: 27%;
     padding: 1%;
     padding-top: 0%;
     display: none;
